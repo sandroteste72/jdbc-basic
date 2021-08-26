@@ -1,48 +1,46 @@
 package part3;
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class QueriesExecution {
 
     public static void main(String[] args) {
 
-        AlunoDAO alunoDAO = new AlunoDAO();
+        StudentDAO studentDAO = new StudentDAO();
 
         // =========================== 1 - Consulta =================================================
-        List<Aluno> alunos = alunoDAO.list();
+        List<Student> students = studentDAO.list();
 
-        alunos.stream().forEach(System.out::println);
+        students.stream().forEach(System.out::println);
 
 
         // ======================= 1.1 - Consulta com filtro ========================================
-        Aluno alunoParaConsulta = alunoDAO.getById(1);
+        Student studentForConsultation = studentDAO.getById(1);
 
-        //System.out.println(alunoParaConsulta);
+        //System.out.println(studentForConsultation);
 
 
         // =========================== 2 - Inserção =================================================
-        Aluno alunoParaInsercao = new Aluno(
+        Student studentForInsertion = new Student(
                 "Matheus",
                 43,
                 "SP"
         );
 
-        //alunoDAO.create(alunoParaInsercao);
+        //studentDAO.create(studentForInsertion);
 
 
         // =========================== 3 - Delete ===================================================
-        //alunoDAO.delete(1);
+        //studentDAO.delete(1);
 
 
         // =========================== 4 - Atualizar ================================================
-        Aluno alunoParaAtualizar = alunoDAO.getById(3);
-        alunoParaAtualizar.setNome("Joaquim");
-        alunoParaAtualizar.setIdade(18);
-        alunoParaAtualizar.setEstado("RS");
+        Student studentToUpdate = studentDAO.getById(3);
+        studentToUpdate.setName("Joaquim");
+        studentToUpdate.setAge(18);
+        studentToUpdate.setState("RS");
 
-        //alunoDAO.update(alunoParaAtualizar);
+        //studentDAO.update(studentToUpdate);
     }
 
 }

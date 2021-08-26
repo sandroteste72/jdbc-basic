@@ -89,7 +89,7 @@ mysql -u root -p
 USE digital_innovation_one;
 
 3 - Criar uma tabela no banco de dados (rodar no prompt do MySQL OU no MySQL workbench)
-CREATE TABLE aluno (
+CREATE TABLE student (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(80) NOT NULL,
     idade INTEGER NOT NULL,
@@ -97,10 +97,10 @@ CREATE TABLE aluno (
 );
 
 4 - Adicionar alguns exemplos (rodar no prompt do MySQL OU no MySQL workbench)
-INSERT INTO aluno(nome, idade, estado) VALUES ('Pedro', 20, 'RJ');
-INSERT INTO aluno(nome, idade, estado) VALUES ('Maria', 35, 'AC');
-INSERT INTO aluno(nome, idade, estado) VALUES ('Joao', 10, 'SC');
-INSERT INTO aluno(nome, idade, estado) VALUES ('Ana', 51, 'GO');
+INSERT INTO student(nome, idade, estado) VALUES ('Pedro', 20, 'RJ');
+INSERT INTO student(nome, idade, estado) VALUES ('Maria', 35, 'AC');
+INSERT INTO student(nome, idade, estado) VALUES ('Joao', 10, 'SC');
+INSERT INTO student(nome, idade, estado) VALUES ('Ana', 51, 'GO');
 
 
 
@@ -118,4 +118,4 @@ CASO ESTEJA USANDO MAVEN (ou nenhum gerenciador de pacotes) DEVERÁ SER UTILIZAD
 =======================================================
 
 - No gradle deve-se adicionar no "build.gradle" (na parte de "dependencies") a linha abaixo
-compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
