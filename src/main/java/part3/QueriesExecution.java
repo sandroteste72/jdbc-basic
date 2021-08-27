@@ -22,9 +22,9 @@ public class QueriesExecution {
 
         // =========================== 2 - Inserção =================================================
         Student studentForInsertion = new Student(
-                "Matheus",
-                43,
-                "SP"
+                "Sandro",
+                48,
+                "RJ"
         );
 
         //studentDAO.create(studentForInsertion);
